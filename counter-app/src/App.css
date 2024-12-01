@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+
+:root {
+  --radius: 15px;
+  --wrapper-bg-color: #364b8a50;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.title {
+  color: transparent;
+  background: linear-gradient(to right, #d4dfff, #49577f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: "Syne", sans-serif;
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+}
+.wrapper {
+  width: 350px;
+  margin: 0 auto;
+  background-color: var(--wrapper-bg-color);
+  padding: 2rem;
+  padding-top: 10rem;
+  border-radius: var(--radius);
+  border: 1px solid #364b8a;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.wrapper h3 {
+  font-size: 6rem;
+  color: #e9eeff;
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Syne", sans-serif;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  & > .btn {
+    width: 120px;
+    height: 70px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #b7c1ff1c;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #b7c1ff4b;
+    transition: all 0.3s;
+  }
+  & > .btn:hover {
+    transform: scale(0.96);
+    background: #b7c1ff33;
+    border: 1px solid #b7c1ff73;
+  }
+  & > .btn:active {
+    transform: scale(0.9);
+  }
+}
+.buttons .btn svg {
+  fill: #ffffff83;
+  transition: fill 0.3s;
+}
+.diff svg {
+  width: 70px;
+}
+.add svg {
+  width: 55px;
+}
+.buttons .btn:hover svg {
+  fill: #ffffff;
+}
