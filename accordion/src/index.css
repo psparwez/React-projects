@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #111118;
+}
+
+li {
+  list-style-type: none;
+}
+
+.accordian-container {
+  max-width: 650px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  background: #8192ff10;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.accordian-list {
+  background: #0000002b;
+  padding: 15px;
+  height: auto;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+.accordian-list:hover {
+  background: #00000044;
+}
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > button {
+    background: #ffffff10;
+    border: none;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff3e;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), inset 1px 1px 0 #cccccc0a;
+  }
+}
+
+.accordian-list h2 {
+  color: #ccc;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.accordian-list p {
+  color: #ddddddb4;
+  line-height: 25px;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 0.5rem;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.accordian-list.expanded {
+  background: #8192ff15;
+}
+
+.accordian-list.expanded p {
+  max-height: 500px;
+  opacity: 1;
+}
